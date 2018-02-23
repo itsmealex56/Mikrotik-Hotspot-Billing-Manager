@@ -34,7 +34,7 @@ SALES		: {$_admin['fullname']}
 {$_L['Plan_Name']}	: {$d['plan_name']}
 {$_L['Plan_Price']} 		: {$_c['currency_code']} {number_format($d['price'],2,$_c['dec_point'],$_c['thousands_sep'])}
 ID Voucher 	: {$d['username']}
-Kata Sandi 	: *****
+Password 	: *****
 
 {$_L['Created_On']} 	: {date($_c['date_format'], strtotime($d['recharged_on']))} {$d['time']}
 {$_L['Expires_On']} 	: {date($_c['date_format'], strtotime($d['expiration']))} {$d['time']}

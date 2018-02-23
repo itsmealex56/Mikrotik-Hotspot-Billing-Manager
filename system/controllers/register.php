@@ -93,7 +93,8 @@ switch($do){
 									->setArgument('name', $v1['code'])
 									->setArgument('profile', $p['name_plan'])
 									->setArgument('password', $v1['code'])
-									->setArgument('limit-uptime', $timelimit)
+//									->setArgument('limit-uptime', $timelimit)
+                                    ->setArgument('limit-bytes-total', $datalimit)
 									->setArgument('comment', $v1['code'])
 								);
 							}else if($p['limit_type']=="Both_Limit"){

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="{$_theme}/images/favicon.ico">
  <link rel="stylesheet" href="{$_theme}/styles/font-awesome/css/font-awesome.min.css">
+
     <style>
  .ukuran {
  size:A4;
@@ -16,14 +17,14 @@
  }
  page[size="A4"] {
    background: white;
-   width: 29.7cm;
-   height: 21cm;
+   width: 21cm;
+   height: 29.7cm;
    display: block;
    margin: 0 auto;
    margin-bottom: 0.5cm;
    html, body {
-	width: 297mm;
-	height: 210mm;
+	width: 210mm;
+	height: 297mm;
    }
  }
  @media print {
@@ -46,18 +47,18 @@
 	
 .box {
 	display: inline-block;
-	height: 140px;
-	width: 220px;
+	height: 125px;
+	width: 192px;
 	background-repeat: no-repeat;
 	background-position: center center;
-	border-top-width: 1px;
-	border-top-style: dashed;
-	border-top-color: #999999;
-	border-left-width: 1px;
-	border-left-style: dashed;
-	border-left-color: #999999;
+	border-width: 1px;
+	border-style: dashed;
+	border-color: #999999;
+	#border-left-width: 1px;
+	#border-left-style: dashed;
+	#border-left-color: #999999;
 }
- 
+
 .kiri {
 	float: left;
 	#width: 110px;
@@ -71,23 +72,25 @@
 	float: right;
 	width: 103px;
 	margin-top: 84px;
- 
+
 }
- 
+
 .plans {
-	font-size:20px;
-	margin-top: 12px;
-	margin-left:-27px;
+
+	font-size:17px;
+	margin-top: 3px;
+	margin-left:-30px;
 	
 }
- 
+
 .user {
-	font-size:24px;
-	margin-top: 20px;
-	margin-left:-26px;
+
+	font-size:20px;
+	margin-top: 16px;
+	margin-left:-30px;
 	
 }
- 
+
 .price {
 	transform: rotate(-90deg);
 	transform-origin: left top 0;
@@ -98,7 +101,7 @@
 	margin-top:20px;
 	text-align:center;
 }
- 
+
 .qrcode {
 	height: 100px;
 	width: 100px;
@@ -111,9 +114,9 @@
         <form method="post" action="{$_url}prepaid/print-voucher/" class="no-print">
         <table width="100%" border="0" cellspacing="0" cellpadding="1" class="btn btn-default btn-sm">
             <br><tr>
- 
+
                 <td style="width:220px;">Package Type <select id="plan_id" name="planid" style="width:130px">
-                <option value="0">-- ALL --</option>
+                <option value="0">-- All --</option>
                 {foreach $plans as $plan}
                     <option value="{$plan['id']}" {if $plan['id']==$planid}selected{/if}>{$plan['name_plan']}</option>
                 {/foreach}
@@ -128,15 +131,26 @@
 		<div id="printable">
 			{foreach $v as $vs}
 			{$jml = $jml + 1}
-		<div class="box" style="background-image:url({$_theme}/vouchers/vouchers.jpg);background-size: 220px 140px;">
+		<div class="box" style="background-image:url({$_theme}/vouchers/{number_format($vs['price'],0,$_c['dec_point'],$_c['thousands_sep'])}.jpg);background-size: 192px 125px;">
 		
 		
 		<div class="kiri">
 			<div class="plans">{$vs['name_plan']}</div> 
 			<div class="user">{$vs['code']}</div> 
-			<div class="price">{$_c['currency_code']} {number_format($vs['price'],0,$_c['dec_point'],$_c['thousands_sep'])}</div>  				
+			<!--<div class="price">{$_c['currency_code']} {number_format($vs['price'],0,$_c['dec_point'],$_c['thousands_sep'])}</div> -->   				
 			
 		</div>
+  <!--<div class="kanan">
+	<div class="qrcode" id="{$vs['code']}"></div>
+		<script>
+		var typeNumber = 0;
+		var errorCorrectionLevel = 'L';
+		var qr = qrcode(typeNumber, errorCorrectionLevel);
+		qr.addData("http://oasis-hotspot.net/hotspot/login?username={$vs['code']}&password={$vs['code']}");
+		qr.make();
+		document.getElementById("{$vs['code']}").innerHTML = qr.createImgTag();
+		</script>
+    </div>-->
 		<div style="clear:both"></div>
 </div>
  

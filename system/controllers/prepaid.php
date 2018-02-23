@@ -20,7 +20,7 @@ if($admin['user_type'] != 'Admin' AND $admin['user_type'] != 'Sales'){
 use PEAR2\Net\RouterOS;
 require_once 'system/autoload/PEAR2/Autoload.php';
 
-$global_passwd="%kb^&_#!H5-04s15%";
+//$global_passwd="%kb^&_#!H5-04s15%";
 
 switch ($action) {
 	case 'list':
@@ -705,7 +705,7 @@ switch ($action) {
 							$client->sendSync($addRequest
 								->setArgument('name', $c['username'])
 								->setArgument('profile', $p['name_plan'])
-								->setArgument('password', $global_passwd)
+								->setArgument('password', $c['username'])
 								->setArgument('limit-uptime', $timelimit)
 							);
 						}else if($p['limit_type']=="Data_Limit"){
@@ -716,7 +716,7 @@ switch ($action) {
 							$client->sendSync($addRequest
 								->setArgument('name', $c['username'])
 								->setArgument('profile', $p['name_plan'])
-								->setArgument('password', $global_passwd)
+								->setArgument('password', $c['username'])
 								->setArgument('limit-bytes-total', $datalimit)
 							);
 						}else if($p['limit_type']=="Both_Limit"){
@@ -731,7 +731,7 @@ switch ($action) {
 							$client->sendSync($addRequest
 								->setArgument('name', $c['username'])
 								->setArgument('profile', $p['name_plan'])
-								->setArgument('password', $global_passwd)
+								->setArgument('password', $c['username'])
 								->setArgument('limit-uptime', $timelimit)
 								->setArgument('limit-bytes-total', $datalimit)
 							);
@@ -740,7 +740,7 @@ switch ($action) {
 						$client->sendSync($addRequest
 							->setArgument('name', $c['username'])
 							->setArgument('profile', $p['name_plan'])
-							->setArgument('password', $global_passwd)
+							->setArgument('password', $c['username'])
 						);
 					}
 					
@@ -791,7 +791,7 @@ switch ($action) {
 							$client->sendSync($addRequest
 								->setArgument('name', $c['username'])
 								->setArgument('profile', $p['name_plan'])
-								->setArgument('password', $global_passwd)
+								->setArgument('password', $c['username'])
 								->setArgument('limit-uptime', $timelimit)
 							);
 						}else if($p['limit_type']=="Data_Limit"){
@@ -802,7 +802,7 @@ switch ($action) {
 							$client->sendSync($addRequest
 								->setArgument('name', $c['username'])
 								->setArgument('profile', $p['name_plan'])
-								->setArgument('password', $global_passwd)
+								->setArgument('password', $c['username'])
 								->setArgument('limit-bytes-total', $datalimit)
 							);
 						}else if($p['limit_type']=="Both_Limit"){
@@ -817,7 +817,7 @@ switch ($action) {
 							$client->sendSync($addRequest
 								->setArgument('name', $c['username'])
 								->setArgument('profile', $p['name_plan'])
-								->setArgument('password', $global_passwd)
+								->setArgument('password', $c['username'])
 								->setArgument('limit-uptime', $timelimit)
 								->setArgument('limit-bytes-total', $datalimit)
 							);
@@ -826,7 +826,7 @@ switch ($action) {
 						$client->sendSync($addRequest
 							->setArgument('name', $c['username'])
 							->setArgument('profile', $p['name_plan'])
-							->setArgument('password', $global_passwd)
+							->setArgument('password', $c['username'])
 						);
 					}
 					

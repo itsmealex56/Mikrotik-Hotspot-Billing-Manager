@@ -25,7 +25,7 @@
 
 	
 </head>
-<body style="background: url({$_theme}/styles/img/1.jpg) no-repeat fixed;
+<body style="background: url({$_theme}/styles/img/2.jpg) no-repeat fixed;
 	-webkit-background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
 	-o-background-size: 100% 100%;

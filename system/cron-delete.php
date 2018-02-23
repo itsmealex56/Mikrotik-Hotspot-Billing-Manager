@@ -58,7 +58,7 @@ foreach ($x as $xs){
 		
 			$y = ORM::for_table('tbl_voucher')->where('id',$xs['id'])->find_one();
 			$y->delete();
-			echo "<br>VOUCHER TERPAKAI SUDAH DIHAPUS<br>";
+			echo "<br>USED VOUCHER HAS BEEN DELETED<br>";
 	}
 }
 

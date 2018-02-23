@@ -16,13 +16,19 @@
 	<!--[if IE 9]> <script src="{$_theme}/scripts/ie/matchMedia.js"></script>  <![endif]--> 
 
 </head>
-<body class="client-login">
+<body style="background: url({$_theme}/styles/img/2.jpg) no-repeat fixed;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;	" class="client-login"> 
+    
+    <center style=" background: rgba(0,0,0,.5);">
 	<div class="container">
 		
 		<div class="form-head mb20">
 
 		</div>
-<center><img  style="max-width:96%;margin-top:5%;" src="{$_theme}/styles/img/head-min.png" /></center>	
+<center><img  style="max-width:96%;margin-top:5%;" src="{$_theme}/styles/img/header.png" /></center>	
 <center>
 			<div style="max-width:400px;margin-top:2%;">
 				<div class="panel panel-default">
@@ -35,15 +41,15 @@
 			</div>
 		{/if}
 				
-					<div class="panel-heading">Panduan Aktivasi Kode Voucher</div>
+					<div class="panel-heading">Voucher Code Activation Guide</div>
 					<div class="panel-body" style="min-height:100px;margin:0 auto;">
 						<div class="form-container">
 							<form class="form-horizontal" action="{$_url}login/post" method="post">
 							
 							<ul style="font-size:14px;font-family:'Century Gothic', tahoma, verdana;text-align:justify;margin-left:-15px;margin-right:15px;">
-								<li>Aktivasikan <span style="font-weight:bold;">Kode Voucher</span> anda agar terintegrasi dengan server hotspot {$_c['CompanyName']}.
+								<li>Activate <span style="font-weight:bold;">Voucher Code</span> to integrate with ITEA SOLUTIONS WI-FI HOTSPOT. 
 								</li>
-								<li>Pada Panel Aktivasi, masukkan Nama dan Kode Voucher yang masih valid dan klik tombol <span style="font-weight:bold;">AKTIVASI</span>, otomatis anda akan login ke server hotspot. Anda tidak perlu mengakses panel ini jika Kode Voucher anda sudah aktif.
+								<li>In the Activation Panel, enter a valid Voucher Name and Voucher Code and click the  <span style="font-weight:bold;">ACTIVATE</span>. You will automatically login to the hotspot server. You do not need to access this panel if your Voucher Code is active.
 								</li>
 							</ul>
 
@@ -51,7 +57,7 @@
 								<div style="margin-top:8px;" class="btn-group btn-group-justified mb15">
 									
 									<div class="btn-group">
-										<a href="{$_url}login" class="btn btn-primary"><i class="fa fa-unlock" aria-hidden="true"></i> PANEL AKTIVASI</a>
+										<a href="{$_url}login" class="btn btn-primary"><i class="fa fa-unlock" aria-hidden="true"></i> ACTIVATION PANEL</a>
 									</div>
 																
 								</div>
@@ -63,7 +69,8 @@
 			</div> </center>
 	</div>
 	<div class="copyright">
-	<center><strong><span style="font-size:11px;color:#bbb;">2017 &copy; <a href="https://github.com/ibnux/phpmixbill" title="PHPMixBill on GitHUB" target="_blank">PHPMixBill</a> | Modified by <a href="https://www.facebook.com/ef.doank" title="Profil Facebook EF.DOANK" target="_blank">EF.DOANK</a></span></strong></center></div>
+	<center><strong><span style="font-size:11px;color:#bbb;"> &copy; 2018 Created by </span><span class="link-footer"><a href="https://www.itea-solutions.tk/" title=""target="_new" style="font-size:11px; color: #fff">Itea Solutions Internet Services</a></span></strong></center></div>
+</center>
 	<script src="scripts/vendors.js"></script>
 </body>
 </html>

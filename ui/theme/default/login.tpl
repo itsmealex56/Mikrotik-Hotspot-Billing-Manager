@@ -17,7 +17,7 @@
 	<!--[if IE 9]> <script src="{$_theme}/scripts/ie/matchMedia.js"></script>  <![endif]-->
 
 </head>
-<body style="background: url({$_theme}/styles/img/1.jpg) no-repeat fixed;
+<body style="background: url({$_theme}/styles/img/2.jpg) no-repeat fixed;
 	-webkit-background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
 	-o-background-size: 100% 100%;
@@ -27,7 +27,7 @@
 		<div class="form-head mb20">
 
 		</div>
-<center><img  style="max-width:96%;margin-top:5%;" src="{$_theme}/styles/img/head-min.png" /></center>	
+<center><img  style="max-width:96%;margin-top:5%;" src="{$_theme}/styles/img/header.png" /></center>	
 <center>
 			<div style="max-width:400px;margin-top:2%;">
 				<div class="panel panel-default">

@@ -3,7 +3,7 @@
 <head>
 <title>{$_c['CompanyName']} ::: Redirect</title>
 </head>
-<form name="redirect" action="http://oasis-hotspot.net/hotspot/login" method="post">
+<form name="redirect" action="http://itea-solutions.wifi/internet/login" method="post">
 </form>
 <script language="JavaScript">
    document.redirect.submit();

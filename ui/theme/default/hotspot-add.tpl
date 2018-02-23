@@ -52,8 +52,8 @@
 							</div>
 							<div class="col-md-2">
 								<select class="form-control" id="data_unit" name="data_unit">
-									<option value="MB">MBs</option>
-									<option value="GB">GBs</option>
+									<option value="M">MBs</option>
+									<option value="G">GBs</option>
 								</select>
 							</div>
 						</div>
