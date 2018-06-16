@@ -23,6 +23,11 @@ See [WIKI](https://github.com/ibnux/phpmixbill/wiki/Instalation)
 
 baca [WIKI](https://github.com/ibnux/phpmixbill/wiki/Instalation)
 
+Login Details
+----
+username: admin
+password: 123456
+
 System Requirements
 ----
 Most current web servers with PHP & MySQL installed will be capable of running PHPMixBill
